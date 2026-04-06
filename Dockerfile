@@ -4,7 +4,7 @@ FROM alpine/git:latest AS clone
 RUN apk add --no-cache bash
 
 # Copy clone script into the target sources directory so SOURCES_DIR resolves correctly
-COPY sources/clone_openedx.sh /data/sources/clone_openedx.sh
+COPY openedx-index-mcp/clone_openedx.sh /data/sources/clone_openedx.sh
 RUN chmod +x /data/sources/clone_openedx.sh && \
     cd /data/sources && \
     bash clone_openedx.sh
