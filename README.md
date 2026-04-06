@@ -1,5 +1,8 @@
 # OpenEdX Index MCP
 
+> **Supported version: Open edX Teak (open-release/teak.3)**
+> All indexed repositories are pinned to versions matching the Teak release.
+
 MCP server that provides search and analysis across the full Open edX codebase (62 repos, 11k+ files, 64k+ symbols) without requiring local clones.
 
 ## What it does
@@ -79,9 +82,9 @@ This clones all 62 repos during build, builds the index on first run, and serves
 Add the following to your project's `CLAUDE.md` to teach Claude Code how to use this MCP:
 
 ```markdown
-## Open edX Codebase Reference
+## Open edX Codebase Reference (Teak release)
 
-You have access to the full Open edX codebase (62 repos, 11k+ files) via the `openedx-index` MCP server. Use it whenever you need to understand Open edX internals, APIs, patterns, or conventions.
+You have access to the full Open edX Teak codebase (62 repos, 11k+ files) via the `openedx-index` MCP server. Use it whenever you need to understand Open edX internals, APIs, patterns, or conventions. All code and docs are from the Teak release.
 
 ### When to use
 
