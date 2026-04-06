@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openedx-index-mcp"
+version = "0.1.0"
+description = "MCP server providing Open edX codebase search and analysis"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "code-index-mcp",
+    "mcp>=1.21.0,<2.0.0",
+    "uvicorn>=0.29.0",
+    "starlette>=0.37.0",
+]
+
+[project.scripts]
+openedx-index-mcp = "openedx_index_mcp.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}

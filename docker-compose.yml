@@ -1,0 +1,16 @@
+services:
+  openedx-index:
+    build:
+      context: ..
+      dockerfile: openedx-index-mcp/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - index-data:/data/index
+    environment:
+      - SOURCES_DIR=/data/sources
+      - INDEX_DIR=/data/index
+      - PORT=8080
+
+volumes:
+  index-data:
